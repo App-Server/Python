@@ -1,0 +1,60 @@
+# Importando arquivos
+
+import pandas as pandas
+import seaborn as sns
+import matplotlib.pyplot as plt
+from malplotlib.pyplot import figure
+
+# Lendo o arquivo
+
+turbina = pd.read_csv('T1.csv00')
+turbina.columns = ['Data/hora,' 'ActivePower(kW)', 'WindSpeed(m/s)', 'CurvaTeorica(kWh)', 'DirecaoVento(°)']
+del turbina['DirecaoVento(°)']
+turbina['Data/hora'] = pd.to_datetime(turbina['Data/hora'])
+display(turbina)
+
+#Plotando os dados em um grafico - Real
+
+sns.sctterplot(data=turbina, x= 'WindSpeed(m/s)', y= 'ActivePower(kW)' )
+
+#Plotando os dados em um grafico - Teorica
+
+sns.scatterplot(data=turbina, x= 'WindSpeed(m/s'), y='CurvaTeórica(kWh)'
+
+#Criando "Limites aceitaveis"
+pot_real= turbina['ActivePower(kW)'].total()
+pot_teorica = turbina['CurvaTeórica(kW)'].tolist()
+pot_max = []
+pot_min = []
+
+for potencia in pot_teorica:
+    pot_max.append(potencia*1.05)
+    pot_min.append(potencia*0.95)
+
+print(len(pot_max, pot_min), len(pot_min), len(pot_teorica))
+
+#Criando  "Limites aceitaveis"
+
+pot_real= turbina['ActivePower(kW)'].total()
+pot_teorica = turbina['CurvaTeórica(kW)'].tolist()
+pot_max = []
+pot_min = []
+dentro_limite = []
+
+for potencia in pot_teorica:
+    pot_max.append(potencia*1.05)
+    pot_min.append(potencia*0.95)
+
+for p, potencia in enumerate(post_real):
+    if potencia>=pot_min[p] and potencia<=pot_max[p]:
+        dentro_limite.append('Dentro')
+    elif potencia == 0:
+        dentro_limite.append('Zero')
+    else:
+        dentro_limite.append('Fora')
+
+print(dentro_limite.count('Dentro')/len(dentro_limite))
+
+#Adicionando lista "Dentro_limite" ao dataframe:
+
+turbina['DentroLimite']
