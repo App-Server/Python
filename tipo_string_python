@@ -1,0 +1,51 @@
+nome = 'Geek University'
+print(nome)
+print(type(nome))
+
+nome = "'Gina's Bar"
+print(nome)
+print(type(nome))
+
+nome = 'Angelina \ Jolie'
+print(nome)
+print(type(nome))
+
+nome = """Angelina
+Jolie"""
+orint(nome)
+print(type(nome))
+
+nome = 'Geek University'
+print(nome.split())
+
+nome = 'Geek University'
+print(nome[0:4]) # Slice de tring
+
+print(nome[5:15]) # Slice de tring
+
+# ['Geek', 'University']
+print(nome.split()[0])
+
+print(nome.slipt()[1])
+
+print(nome[14])
+
+nome = 'Geek University'
+
+# [::-1] -> Comece do primeiro elemento, va até o ultimo elemento inverta
+ 
+print(nome[::-1]) # Inversão da String Pythonico
+
+print(nome.replace('G', 'P'))
+
+print(Type(nome))
+
+texto = 'socorram me subino onibus em marrocos' # Palindromo
+print(texto)
+
+print(texto[::-1])
+
+nome = 'ana' #Palindromo
+print(nome)
+
+print(nome[::-1])
