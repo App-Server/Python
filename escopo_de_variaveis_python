@@ -1,0 +1,44 @@
+"""
+Escopo de variáveis
+
+Dois casos de escopo:
+
+1- Variaveis globais;
+    -Variaveos globais são reconhecidas, ou seja, seu escopo compreende, todo o programa.
+
+2- Variaveis locais;
+    -Variaveis locais são reconhecidas apenas no bloco onde foram declaradas, ou seja, seu escopo esta limitado ao bloco onde foi declarada.
+
+Para declarar variaveis em Pyton fazemos:
+
+nome_da_variavel = valor_da_variavel
+
+
+Python é uma linguagem de tipagem. Isso significa que ao declaramos uma variavel, nos não colocamos o tipo de dado dela.
+Este tipo é inferido ao atribuimos o valor a mesma.
+
+Exemplo em C:
+int numeor = 42
+
+Exemplo em Java:
+int numero = 42;
+"""
+
+numero = 42 # Exemplo de variavel global
+print(numero)
+print(type(numero))
+
+numero = 'Geek'
+print(numero)
+print(type(numero))
+
+nao_existo = 'Oi'
+print(nao_existo)
+
+numero = 42
+
+if numero > 10:
+    novo = numero + 10 = # A variável 'novo está declarada localmente dentro do bloco do if. Portanto, é local
+    print(novo)
+
+print(novo)
